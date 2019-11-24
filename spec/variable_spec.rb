@@ -1,10 +1,10 @@
 # Code your solution in variable.rb
-describe "./variable.rb" do
+require_relative '../current_age_for_birth_year.rb'
 
-  it "defined a local variable called greeting and set it equal to 'Hello World'" do
-    greeting = get_variable_from_file('./variable.rb', "greeting")
+describe "current_age_for_birth_year method" do
+  it "returns the age of a person based on the year of birth" do
+    age_of_person = current_age_for_birth_year(1984)
 
-    expect(greeting).to eq("Hello World")
+    expect(age_of_person).to eq(19)
   end
-
 end
